@@ -1,0 +1,24 @@
+# Archivo robots.txt
+
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /temp/
+Disallow: /logs/
+Disallow: /error/
+Disallow: /errors/
+Disallow: /includes/
+Disallow: /system/
+Disallow: /assets/
+Disallow: /downloads/
+Disallow: /templates/
+Disallow: /cache/
+Disallow: /fonts/
+Disallow: /images/
+Disallow: /js/
+Disallow: /media/
+Disallow: /uploads/
+
+Sitemap: http://www.example.com/sitemap.xml
