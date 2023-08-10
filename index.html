@@ -5,127 +5,203 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eric Aguirrez Andraca</title>
-    <meta name="description" content="Pagina personal para poner mi portafolio de proyectos web">
-    <meta name="keywords" content="html,css,web, desarrollo, websites, frontend, backend, fullstack, developer, ">
-    <meta name="author" content="Eric Aguirrez Andraca">
-    <link rel="canonical" href="www.eric-agrez.com/">
-    <link rel="icon" type="image/png" sizes="32x32" href="./imgs/icon.png">
+    <meta name="keywords"
+        content="Front-end developer portfolio, web design showcase, user experience, innovative websites, online presence, expert craftsmanship, creative web development, responsive designs, UI/UX design, HTML, CSS, JavaScript, interactive websites, mobile-friendly layouts, cross-browser compatibility, SEO-friendly coding, user-centric interfaces, digital design projects.">
+    <meta name="description"
+        content="Explore the portfolio of a skilled front-end developer, showcasing innovative web designs and seamless user experiences. Elevate your online presence with expertly crafted websites. Discover the perfect blend of creativity and functionality today.">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
+    <title>Eric Aguirrez Andraca - Frontend Developer</title>
 </head>
 
 <body>
-    <!-- <img src="./imgs/cursor.svg" id="cursor"> -->
-    <div class="background">
-        <div class="background-colors">
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="download-cv">
+                <a class="outline-button">Download CV</a>
+            </div>
         </div>
-    </div>
-
-    <div class="arrow-up hide">
-        <div>
-            <a href="#header">^</a>
-        </div>
-    </div>
-
-    <header class="header" id="header">
-        <a class="header__name">
-            <img src="./imgs/logo.png" alt="logo"> <h1>Eric Aguirrez</h1>
-        </a>
-        <nav class="header__navbar">
-            <ul>
-                <li><a href="#inicio" title="#inicio">Home</a></li>
-                <li><a href="#works" title="#works">Projects</a></li>
-                <li><a href="#about" title="#about">About</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
-
-        <section class="seccion info" id="inicio">
-            <h2 class="name">I'm a</h2>
-            <h3>Frontend Developer</h3>
-
-            <ul class="work_socials">
-                <li><a href="https://www.linkedin.com/in/eric-aguirrez-andraca-766090197/" target="_blank" rel="noopener noreferer" title="linkedin"> Linkedin</a>
-                </li>
-                <li><a href="https://github.com/AleisterFox" target="_blank" rel="noopener noreferer" title="github">Github</a>
-                </li>
-            </ul>
-        </section>
-
-        <section class="seccion works" id="works">
-            <h2>Projects</h2>
-            <p>Some of the projects I've worked on</p>
-            <div class="grid">
-                <article class="job">
-                        <img src="./imgs/projects/suajes3e.png" alt="suajes3e project image" class="job__img" loading="lazy">
-                        <div class="job__description">
-                            <h4 class="job__description--title">Suajes3E</h4>
-                            <div class="job__description--links">
-                                <a href="https://suajes3e-elias.com/">Web</a>
-                                <a href="https://github.com/AleisterFox/suajes3e">Github</a>
-                            </div>
-                        </div>
-                </article>
-                <article class="job">
-                    <img src="./imgs/projects/google-clon.png" alt="suajes3e project image" class="job__img" loading="lazy">
-                    <div class="job__description">
-                        <h4 class="job__description--title">Google clon</h4>
-                        <div class="job__description--links">
-                            <a href="https://aleisterfox.github.io/GoogleClon/">Web</a>
-                            <a href="https://github.com/AleisterFox/GoogleClon">Github</a>
-                        </div>
+        <section id="hero">
+            <figure class="bg">
+                <img src="img/profile.png" alt="background image">
+            </figure>
+            <div class="container">
+                <h1>I'm a Frontend Developer</h1>
+                <h2>Eric Aguirrez Andraca</h2>
+                <div class="greetings">
+                    <h3>Nice to meet you, I would like to welcome you to my personal portfolio</h3>
+                    <div class="download-cv">
+                        <a href="#" class="outline-button">Download CV</a>
                     </div>
-                </article>
-                <article class="job">
-                    <img src="./imgs/projects/summary-component.png" alt="suajes3e project image" class="job__img" loading="lazy">
-                    <div class="job__description">
-                        <h4 class="job__description--title sum">Summary Component</h4>
-                        <div class="job__description--links">
-                            <a href="https://aleisterfox.github.io/result-summary-component/">Web</a>
-                            <a href="https://github.com/AleisterFox/result-summary-component">Github</a>
-                        </div>
-                    </div>
-                </article>              
+                </div>
             </div>
         </section>
-
-        <section class="seccion about" id="about">
+        <div class="stack">
+            <h3>Techologies</h3>
+            <h4>I've worked with this techologies</h4>
+            <div class="stack__logos">
+                <figure><img src="img/html.png" alt="html logo"></figure>
+                <figure><img src="img/css.png" alt="css logo"></figure>
+                <figure><img src="img/java-script.png" alt="JavaScript logo"></figure>
+                <figure><img src="img/laravel.png" alt="laravel logo"></figure>
+                <figure><img src="img/react.png" alt="ReactJs logo"></figure>
+            </div>
+        </div>
+        <div class="about-me">
             <h2>About me</h2>
-            <p> I am a young person passionate about the web world, I have knowledge in Python, although in recent times, I have focused more on PHP 8, Laravel 8 and 9, and I have had the opportunity to work as a freelancer on some very interesting projects.</p>
-            <p>I enjoy writing from time to time, as well as playing an instrument or singing.</p>
-            <p> I like to constantly stay informed about the new technologies that are emerging every day.</p>
-            <p> I am also attracted to the world of machine learning and AI, so I try to keep up with what is happening in that interesting world.</p>
+            <p>Passionate about the dynamic web world. <br> My journey began with Python, I've dived into
+                PHP 8, especially Laravel 8 and 9. Freelancing enriched my journey, tackling some projects.
 
-            <ul class="rrss">
-                <li>
-                    <a href="https://www.linkedin.com/in/eric-aguirrez-andraca-766090197/" target="_blank" rel="noopener noreferer">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg" viewBox="0 0 16 16">
-                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                          </svg>
+                Beyond coding, I embrace writing and music for creativity. Staying updated in tech, I'm drawn to AI and
+                machine learning.
+                <br>
+                Crafting clinic laboratory websites, conceiving diverse Adobe XD designs, and building almost half of
+                them in a couple of months showcase my skills. I've also gained React JS basics for immersive online
+                experiences.</p>
+        </div>
+        <section id="portfolio">
+            <h2>Some of my projects</h2>
+            <h3>These are some of the projects i've worked on</h3>
+            <div id="projects">
+                <div class="project">
+                    <figure>
+                        <img src="img/suajes3e.png" alt="Suajes 3E">
+                    </figure>
+                    <a class="description" href="http://suajes3e-elias.com/" target="_blank">
+                        <h4>Suajes 3E</h4>
+                        <p>A web platform for the internal control of a die company</p>
+                        <div class="logos">
+                            <img src="img/laravel.png" alt="laravel logo">
+                            <img src="img/html.png" alt="html logo">
+                            <img src="img/css.png" alt="css logo">
+                            <img src="img/java-script.png" alt="java-script logo">
+                        </div>
                     </a>
-                </li>
-                <li>
-                    <a href="https://github.com/AleisterFox" target="_blank" rel="noopener noreferer">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg" viewBox="0 0 16 16">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                          </svg>
+                </div>
+                <div class="project">
+                    <figure>
+                        <img src="img/adnspa.png" alt="Adn spa">
+                    </figure>
+                    <a class="description" href="https://adnspa.mx/" target="_blank">
+                        <h4>ADN SPA</h4>
+                        <p>Website for a spa located in Leon, Gto</p>
+                        <div class="logos">
+                            <img src="img/html.png" alt="html logo">
+                            <img src="img/css.png" alt="css logo">
+                            <img src="img/java-script.png" alt="java-script logo">
+                        </div>
                     </a>
-                </li>
-            </ul>
+                </div>
+                <div class="project">
+                    <figure>
+                        <img src="img/lbp.png" alt="laboratorio bioquimico profesional">
+                    </figure>
+                    <a class="description" href="https://bioquimico.com.mx/2023/resultados/index.php" target="_blank">
+                        <h4>Suajes 3E</h4>
+                        <p>Website for a clinic laboratory</p>
+                        <div class="logos">
+                            <img src="img/html.png" alt="html logo">
+                            <img src="img/css.png" alt="css logo">
+                            <img src="img/java-script.png" alt="java-script logo">
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <figure>
+                        <img src="img/ancoweb.png" alt="laboratorio Anco">
+                    </figure>
+                    <a class="description" href="https://ancoresultados.com/2023/" target="_blank">
+                        <h4>Anco LAbs</h4>
+                        <p>Website for a clinic laboratory</p>
+                        <div class="logos">
+                            <img src="img/html.png" alt="html logo">
+                            <img src="img/css.png" alt="css logo">
+                            <img src="img/java-script.png" alt="java-script logo">
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <figure>
+                        <img src="img/yardsale.png" alt="e-commerce design">
+                    </figure>
+                    <a class="description" href="https://eric-agrez.com/curso-fd-js/" target="_blank">
+                        <h4>Yard Sale Store</h4>
+                        <p>Web design for a bicycle store</p>
+                        <div class="logos">
+                            <img src="img/html.png" alt="html logo">
+                            <img src="img/css.png" alt="css logo">
+                            <img src="img/java-script.png" alt="java-script logo">
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <figure>
+                        <img src="img/blog.png" alt="e-commerce design">
+                    </figure>
+                    <a class="description" href="https://eric-agrez.com/blog/" target="_blank">
+                        <h4>Little blog</h4>
+                        <p>Just a blog</p>
+                        <div class="logos">
+                            <img src="img/html.png" alt="html logo">
+                            <img src="img/css.png" alt="css logo">
+                            <img src="img/java-script.png" alt="java-script logo">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Let's talk to <div class="colab">Collaboration</div></h2>
+            <div class="buttons">
+                <div class="contact-button">
+                    <a id="touch" href="https://wa.link/m4favs" class="outline-button" target="_blank">Get in touch</a>
+                </div>
+                <div class="social-button">
+                    <a class="outline-button filled">My socials</a>
+                    <div class="social__media hide">
+                        <a href="https://github.com/AleisterFox"><img src="img/github.png" alt="github"></a>
+                        <a href="https://www.linkedin.com/in/eric-aguirrez-andraca-766090197/" target="_blank"><img src="img/linkedin.png" alt="linkedin"></a>
+                        <a href="" target="_blank"><img src="img/twitter.png" alt="twitter"></a>
+                    </div>
+                </div>
+            </div>
+            
         </section>
     </main>
 
     <footer>
-        <span>©2022 | All Rights Reserved</span>
+        <hr>
+        <div class="container">
+            <div>
+                <p>Working in development and improving my design skills has given me a better sense of the extraordinary in the digital world</p>
+                <p class="copy">&copy; Eric Agrez All rights reserved 2022</p>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="https://github.com/AleisterFox">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/eric-aguirrez-andraca-766090197/" target="_blank">Linkedin</a></li>
+                    <li><a href="" target="_blank">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
-
-    <script src="script.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
