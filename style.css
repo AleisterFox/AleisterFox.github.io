@@ -26,7 +26,9 @@ header {
   height: 70px;
   z-index: 1000;
 }
-
+.burguer {
+    display: none;
+}
 .navbar {
   display: flex;
   align-items: center;
@@ -87,11 +89,15 @@ header {
     height: 100vh;
 }
 
+#hero .container {
+    position: absolute;
+    top: 15rem;
+}
+
 h1 {
     font-size: 2.5vw;
-    position: absolute;
-    top: 43vh;
     color: rgba(224, 124, 30, 0.7);
+    margin: 3rem 0;
 }
 
 #hero .bg {
@@ -103,22 +109,22 @@ h1 {
 #hero h2 {
     font-size: 6vw;
     font-weight: 500;
-    position: absolute;
-    top: 20vh;
     max-width: 70rem;
-    line-height: 10rem;
 }
 
 #hero .greetings {
-    position: absolute;
     font-size: 1.8rem;
-    top: 52vh;
     display: flex;
+    justify-content: space-between;
     width: 40vw;
 }
 
+#hero .greetings .download-cv {
+    width: 30%;
+}
+
 #hero h3 {
-    max-width: 30vw;
+    width: 70%;
     font-size: 1.4vw;
 }
 
@@ -197,6 +203,7 @@ h1 {
     font-weight: 300;
     width: 50%;
     position: relative;
+    text-align: justify;
 }
 
 .about-me p::after {
@@ -214,13 +221,14 @@ h1 {
 /* portfolio */
 
 #portfolio {
-    margin-top: 15rem;
+    margin-top: 10rem;
+    padding: 0rem;
     padding: 0 5rem;
-    
 }
 
 #portfolio h2 {
     font-size: 4rem;
+    margin-bottom: 2rem;
 }
 
 #portfolio h3 {
@@ -232,18 +240,19 @@ h1 {
 
 #projects {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
+    row-gap: 5rem;
     width: 100%;
 }
 
 .project {
     min-width: 30%;
-    width: 300px;
-    max-width: 90%;
+    width: 30rem;
+    max-width: 100%;
     border: 4px solid white;
     position: relative;
-    margin: 3rem;
+    margin: 0rem;
     transition: all 0.2s ease-in-out;
 }
 
@@ -444,5 +453,292 @@ footer ul a {
     to {
         opacity: 0;
         transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .download-cv {
+        margin-right: 6rem;
+    }
+    #hero {
+        padding: 0 5rem;
+        height: 55vh;
+    }
+    #hero .bg {
+        width: 70%;
+        right: -5rem;
+    }
+    #hero img {
+        width: 100%;
+    }
+    #hero h2 {
+        font-size: 10vw;
+        max-width: 60vw;
+    }
+    h1 {
+        font-size: 5vw;
+        margin: 2rem 0;
+    }
+
+    #hero .greetings {
+        width: 70vw;
+        font-size: 2.5vw;
+        flex-direction: row;
+    }
+
+    #hero h3 {
+        width: 60%;
+        font-size: 2.5vw;
+    }
+
+    .stack h3 {
+        font-size: 5vw;
+    }
+
+    .stack h4 {
+        font-size: 2.5vw;
+    }
+
+    .stack__logos {
+        width: 100%;
+    }
+
+    .about-me {
+        margin-top: 10rem;
+    }
+    .about-me h2 {
+        font-size: 5vw;
+    }
+    .about-me p {
+        width: 70%;
+    }
+
+    #portfolio h2 {
+        font-size: 5vw;
+    }
+
+    #portfolio h3 {
+        font-size: 2.5vw;
+    }
+    #contact {
+        margin-top: 10rem;
+    }
+    #contact h2 {
+        font-size: 5vw;
+    }
+
+    footer .container div:first-child {
+        width: 50vw;
+    }
+
+    footer .container div:first-child .copy {
+        padding-top: 1rem;
+    }
+}
+
+@media (max-width: 425px) {
+    h3 {
+        font-size: 8vw !important;
+    }
+    h4 {
+        font-size: 4vw !important;
+    }
+    header {
+        padding: 0 1rem;
+    }
+    .navbar {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .menu {
+        background-color: rgba(0, 0, 0,0.9);
+        height: 15rem;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: -1rem;
+        display: none;
+    }
+    .menu ul {
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .burguer {
+        height: 100%;
+        display: block;
+        width: 3rem;
+        margin-right: 2rem;
+    }
+    .burguer img {
+        width: 100%;
+        filter: invert(100%);
+    }
+
+    #hero {
+        padding: 0 2rem;
+        overflow-x: hidden;
+        height: 45vh;
+    }
+
+    #hero .container {
+        top: 10rem;
+    }
+    #hero .bg {
+        right: -5rem;
+        top: 5rem;
+    }
+    #hero h2 {
+        font-size: 12vw;
+        max-width: 70vw;
+    }
+    #hero h1 {
+        font-size: 6vw;
+    }
+    #hero .greetings {
+        width: 100%;
+    }
+
+    #hero h3 {
+        font-size: 3.5vw !important;
+        width: 50%;
+    }
+    #hero .greetings .download-cv {
+        margin-left: 1rem;
+        margin-right: 3rem;
+        width: 40%;
+    }
+    #hero .outline-button {
+        width: 100%;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    .stack {
+        padding: 0 2rem;
+        margin-top: 10rem;
+    }
+
+    .stack__logos img {
+        height: 45%;
+    }
+
+    .about-me {
+        padding: 0 2rem;
+    }
+
+    .about-me h2 {
+        font-size: 8vw;
+    }
+    .about-me p {
+        width: 100%;
+    }
+    .about-me p::after {
+        height: 110%;
+        width: 70%;
+        top: -5%;
+        left: 30%;
+    }
+
+    #portfolio {
+        padding: 0 2rem;
+    }
+    #portfolio h2 {
+        font-size: 8vw;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    #portfolio h3 {
+        font-size: 4vw !important;
+        text-align: center;
+    }
+    #projects {
+        row-gap: 2rem;
+    }
+    .project {
+        width: 35rem;
+    }
+
+    #contact {
+        padding: 0 2rem;
+    }
+    #contact h2 {
+        width: 100%;
+        font-size: 8vw;
+    }
+
+    #contact .buttons {
+        width: 100%;
+    }
+
+    .social__media {
+        transform: translateX(-105%) translateY(150%);
+    }
+
+    footer {
+        padding: 0 2rem;
+    }
+    footer .container div:first-child {
+        width: 60vw;
+        text-align: justify;
+        font-size: 1.2rem;
+    }
+
+    footer ul a {
+        font-size: 1.2rem;
+    }
+
+    @keyframes appear {
+        from {
+            opacity: 0;
+            transform: translateY(0) translateX(-105%) scale(0.5);
+            z-index: -1 !important;
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateY(150%) translateX(-105%) scale(1);
+        }
+    }
+    
+    @keyframes dissappear {
+        from {
+            opacity: 1;
+            transform: translateY(150%) translateX(-105%) scale(1);
+        }
+    
+        to {
+            opacity: 0;
+            transform: translateY(0) translateX(-105%) scale(0.5);
+        }
+    }
+
+
+    @keyframes menuappear {
+        from {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes menudisappear {
+        
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(100%);
+            opacity: 0;
+        }
     }
 }
