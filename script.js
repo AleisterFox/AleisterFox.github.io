@@ -3,6 +3,8 @@ const socialsButton = document.querySelector('.filled');
 const touchButton = document.getElementById('touch');
 const inTouch = document.getElementById('touch').innerText;
 const inTouchWeight = touchButton.style.fontWeight;
+const burguerMenu = document.querySelector('.burguer');
+const menu = document.querySelector('.menu');
 
 downloadButton.forEach(download => {
     download.addEventListener('click', () => {
@@ -27,26 +29,23 @@ downloadButton.forEach(download => {
       });
 });
 
-
-
 socialsButton.addEventListener('click', () => {
   let socialMedia = document.querySelector('.social__media');
   if (socialMedia.classList.contains('hide')) {
     socialMedia.style.zIndex = '-1';
     socialMedia.classList.remove ('hide');
-    socialMedia.style.animation = 'appear 1s linear';
+    socialMedia.style.animation = 'appear 0.5s linear';
     setTimeout(() => {
       socialMedia.style.zIndex = '1';
-    }, 990);
+    }, 490);
   } else {
     socialMedia.style.zIndex = '-1';
-    socialMedia.style.animation = 'dissappear 1s linear';
+    socialMedia.style.animation = 'dissappear 0.5s linear';
     setTimeout(() => {
       socialMedia.classList.add ('hide');
-    }, 990);
+    }, 490);
   }
 });
-
 
 
 touchButton.addEventListener('mouseover', () => {
@@ -57,4 +56,19 @@ touchButton.addEventListener('mouseover', () => {
 touchButton.addEventListener('mouseout', () => {
   touchButton.innerText = inTouch;
   touchButton.style.fontWeight = inTouchWeight;
+});
+
+burguerMenu.addEventListener('click', () => {
+  let displayMenu = menu.style.display;
+
+  if (displayMenu === 'none') {
+    menu.style.display = 'block';
+    menu.style.animation = 'menuappear 0.5s ease-in-out'
+    
+  } else {
+    menu.style.animation = 'menudisappear 0.5s ease-in-out'
+    setTimeout(() => {
+      menu.style.display = 'none';
+    }, 490);
+  }
 });
