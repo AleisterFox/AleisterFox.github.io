@@ -98,18 +98,54 @@ h1 {
     font-size: 2.5vw;
     color: rgba(224, 124, 30, 0.7);
     margin: 3rem 0;
+    animation: down_appear 2s ease-in-out;
 }
 
 #hero .bg {
     position: absolute;
     width: auto;
     right: 15rem;
+    animation: bg_appear 2s ease-in-out;
 }
 
 #hero h2 {
     font-size: 6vw;
     font-weight: 500;
     max-width: 70rem;
+    animation: name_appear 2s ease-in-out;
+}
+
+@keyframes name_appear {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes down_appear {
+    from {
+        transform: translateY(200%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bg_appear  {
+    from {
+        transform: translateX(100%) scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
 }
 
 #hero .greetings {
@@ -117,6 +153,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     width: 40vw;
+    animation: down_appear 2s ease-in-out;
 }
 
 #hero .greetings .download-cv {
