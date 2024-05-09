@@ -14,6 +14,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
+    <script src="wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script> 
     <title>Eric Aguirrez Andraca - Frontend Developer</title>
 </head>
 
@@ -55,7 +60,7 @@
                 </div>
             </div>
         </section>
-        <div class="stack">
+        <div class="stack fadeInLeft wow">
             <h3>Techologies</h3>
             <h4>I've worked with this techologies</h4>
             <div class="stack__logos">
@@ -66,17 +71,13 @@
                 <figure><img src="img/react.png" alt="ReactJs logo"></figure>
             </div>
         </div>
-        <div class="about-me">
+        <div class="about-me fadeIn wow">
             <h2>About me</h2>
-            <p>Passionate about the dynamic web world. My journey began with Python, I've dived into
-                PHP 8, especially Laravel 8 and 9. Freelancing enriched my journey, tackling some projects.
-
-                Beyond coding, I embrace writing and music for creativity. Staying updated in tech, I'm drawn to AI and
-                machine learning.
-                
-                Crafting clinic laboratory websites, conceiving diverse Adobe XD designs, and building almost half of
-                them in a couple of months showcase my skills. I've also gained React JS basics for immersive online
-                experiences.</p>
+            <p>Passionate about the dynamic web world. My journey began with Python, I immersed myself in PHP 8, especially Laravel 8 and 9, I also did a small project with filamentPHP to get to know that library. Freelancing enriched my journey, tackling some projects.
+                <br>
+                Beyond coding, I embrace writing and music for creativity. Keeping up to date with technology, I am attracted to AI and machine learning.
+                                
+                I have basic notions of Figma and Adobe XD, which has allowed me to work closely with designers. I also learned the basics of React JS to create more dynamic websites.</p>
         </div>
         <section id="portfolio">
             <h2>Some of my projects</h2>
@@ -84,13 +85,13 @@
             <div id="projects">
                 <div class="project">
                     <figure>
-                        <img src="img/suajes3e.png" alt="Suajes 3E">
+                        <img src="img/amezcua.png" alt="amezcua">
                     </figure>
-                    <a class="description" href="http://suajes3e-elias.com/" target="_blank">
-                        <h4>Suajes 3E</h4>
-                        <p>A web platform for the internal control of a die company</p>
+                    <a class="description" href="http://amezcuamx.com/" target="_blank">
+                        <h4>Amezcua</h4>
+                        <p>A web platform for real state services</p>
                         <div class="logos">
-                            <img src="img/laravel.png" alt="laravel logo">
+                            <!-- <img src="img/laravel.png" alt="laravel logo"> -->
                             <img src="img/html.png" alt="html logo">
                             <img src="img/css.png" alt="css logo">
                             <img src="img/java-script.png" alt="java-script logo">
@@ -113,11 +114,11 @@
                 </div>
                 <div class="project">
                     <figure>
-                        <img src="img/lbp.png" alt="laboratorio bioquimico profesional">
+                        <img src="img/trefiladora.png" alt="Trefiladora ITA">
                     </figure>
-                    <a class="description" href="https://bioquimico.com.mx/2023/resultados/index.php" target="_blank">
-                        <h4>Suajes 3E</h4>
-                        <p>Website for a clinic laboratory</p>
+                    <a class="description" href="https://trefiladoraita.com" target="_blank">
+                        <h4>Trefiladora ITA</h4>
+                        <p>Website for a business selling materials</p>
                         <div class="logos">
                             <img src="img/html.png" alt="html logo">
                             <img src="img/css.png" alt="css logo">
@@ -127,11 +128,11 @@
                 </div>
                 <div class="project">
                     <figure>
-                        <img src="img/ancoweb.png" alt="laboratorio Anco">
+                        <img src="img/adminika.png" alt="laboratorio Anco">
                     </figure>
-                    <a class="description" href="https://ancoresultados.com/2023/" target="_blank">
-                        <h4>Anco LAbs</h4>
-                        <p>Website for a clinic laboratory</p>
+                    <a class="description" href="https://adminika.mx" target="_blank">
+                        <h4>Adminika</h4>
+                        <p>Website for a real state management company</p>
                         <div class="logos">
                             <img src="img/html.png" alt="html logo">
                             <img src="img/css.png" alt="css logo">
@@ -141,11 +142,11 @@
                 </div>
                 <div class="project">
                     <figure>
-                        <img src="img/yardsale.png" alt="e-commerce design">
+                        <img src="img/sensiblemente.png" alt="sensiblemente psicoterapia">
                     </figure>
-                    <a class="description" href="https://eric-agrez.com/curso-fd-js/" target="_blank">
-                        <h4>Yard Sale Store</h4>
-                        <p>Web design for a bicycle store</p>
+                    <a class="description" href="https://sensiblementemx.com" target="_blank">
+                        <h4>Sensiblemente</h4>
+                        <p>Web design for a psychotherapist</p>
                         <div class="logos">
                             <img src="img/html.png" alt="html logo">
                             <img src="img/css.png" alt="css logo">
@@ -155,11 +156,11 @@
                 </div>
                 <div class="project">
                     <figure>
-                        <img src="img/blog.png" alt="e-commerce design">
+                        <img src="img/bulmaro.png" alt="Dr.Bulmaro Padilla">
                     </figure>
-                    <a class="description" href="https://eric-agrez.com/blog/" target="_blank">
-                        <h4>Little blog</h4>
-                        <p>Just a blog</p>
+                    <a class="description" href="https://drbulmaropadillacardiologia.com/" target="_blank">
+                        <h4>Dr. Bulmaro Irving Padilla Gómez</h4>
+                        <p>A Website for a cardiologist</p>
                         <div class="logos">
                             <img src="img/html.png" alt="html logo">
                             <img src="img/css.png" alt="css logo">
