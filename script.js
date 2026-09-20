@@ -1,74 +1,29 @@
-const downloadButton = document.querySelectorAll('.download-cv');
-const socialsButton = document.querySelector('.filled');
-const touchButton = document.getElementById('touch');
-const inTouch = document.getElementById('touch').innerText;
-const inTouchWeight = touchButton.style.fontWeight;
-const burguerMenu = document.querySelector('.burguer');
-const menu = document.querySelector('.menu');
+/**
+ * General UI Scripts (Hamburger Menu, Dynamic Year)
+ */
 
-downloadButton.forEach(download => {
-    download.addEventListener('click', () => {
-        const fileUrl = './cv.pdf';
-        const fileName = 'cv.pdf';
-      
-        fetch(fileUrl)
-          .then(response => response.blob())
-          .then(blob => {
-            // Create a temporary anchor element
-            const a = document.createElement('a');
-            a.href = URL.createObjectURL(blob);
-            a.download = fileName;
-      
-            // Programmatically trigger the download
-            a.click();
-      
-            // Clean up
-            URL.revokeObjectURL(a.href);
-            a.remove();
-          });
-      });
-});
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const menuOverlay = document.querySelector('.menu-overlay');
+  const menuLinks = document.querySelectorAll('.menu-link');
 
-socialsButton.addEventListener('click', () => {
-  let socialMedia = document.querySelector('.social__media');
-  if (socialMedia.classList.contains('hide')) {
-    socialMedia.style.zIndex = '-1';
-    socialMedia.classList.remove ('hide');
-    socialMedia.style.animation = 'appear 0.5s linear';
-    setTimeout(() => {
-      socialMedia.style.zIndex = '1';
-    }, 490);
-  } else {
-    socialMedia.style.zIndex = '-1';
-    socialMedia.style.animation = 'dissappear 0.5s linear';
-    setTimeout(() => {
-      socialMedia.classList.add ('hide');
-    }, 490);
-  }
-});
+  // Toggle Menu
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('is-active');
+    menuOverlay.classList.toggle('is-active');
+  });
 
+  // Close Menu on Link Click
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('is-active');
+      menuOverlay.classList.remove('is-active');
+    });
+  });
 
-touchButton.addEventListener('mouseover', () => {
-  touchButton.innerText = 'Whatsapp me';
-  touchButton.style.fontWeight = '800';
-});
-
-touchButton.addEventListener('mouseout', () => {
-  touchButton.innerText = inTouch;
-  touchButton.style.fontWeight = inTouchWeight;
-});
-
-burguerMenu.addEventListener('click', () => {
-  let displayMenu = menu.style.display;
-
-  if (displayMenu === 'none') {
-    menu.style.display = 'block';
-    menu.style.animation = 'menuappear 0.5s ease-in-out'
-    
-  } else {
-    menu.style.animation = 'menudisappear 0.5s ease-in-out'
-    setTimeout(() => {
-      menu.style.display = 'none';
-    }, 490);
+  // Dynamic Year in Footer
+  const yearElement = document.getElementById('year');
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
   }
 });
