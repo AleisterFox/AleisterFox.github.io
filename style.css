@@ -171,6 +171,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .nav-logo img {
   height: 40px;
+  transform: scale(1.8);
+  transform-origin: left center;
   filter: invert(1);
 }
 
