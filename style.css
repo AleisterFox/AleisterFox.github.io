@@ -85,6 +85,69 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 /* -------------------------------------------------------------------------- */
+/* GLOBAL LOADER                                                              */
+/* -------------------------------------------------------------------------- */
+#global-loader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: var(--bg-deep); /* Completely dark */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  will-change: opacity, transform;
+}
+.loader-terminal {
+  width: 90%;
+  max-width: 500px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.loader-log {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.log-line {
+  opacity: 0; /* Hidden initially for sequence animation */
+}
+.log-ok {
+  color: var(--accent-cyan);
+  opacity: 0; /* Hidden initially */
+  margin-left: 0.5rem;
+}
+.loader-status {
+  color: var(--accent-cyan);
+}
+.loader-progress-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.progress-bar-container {
+  flex-grow: 1;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+.progress-bar-fill {
+  position: absolute;
+  top: 0; left: 0; height: 100%;
+  width: 0%;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 10px var(--accent-cyan-glow);
+}
+.progress-text {
+  min-width: 40px;
+  text-align: right;
+  color: var(--text-primary);
+}
+
+/* -------------------------------------------------------------------------- */
 /* NAVIGATION                                                                 */
 /* -------------------------------------------------------------------------- */
 .header {
@@ -107,7 +170,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .nav-logo img {
-  height: 24px;
+  height: 40px;
   filter: invert(1);
 }
 

@@ -33,29 +33,86 @@ document.addEventListener("DOMContentLoaded", () => {
   
   if (!prefersReducedMotion) {
     // --------------------------------------------------
-    // Hero Initial Load Animation
+    // Loader Animation Sequence
     // --------------------------------------------------
-    const heroTl = gsap.timeline();
+    const loader = document.getElementById("global-loader");
+    const progressBar = document.querySelector(".progress-bar-fill");
+    const progressText = document.querySelector(".progress-text");
     
-    heroTl.fromTo(".hero-status-bar", 
-      { opacity: 0, x: -20 },
-      { opacity: 1, x: 0, duration: 0.8, ease: "power2.out", delay: 0.2 }
-    )
-    .fromTo(".title-line", 
-      { y: "100%" },
-      { y: "0%", duration: 1, stagger: 0.1, ease: "power4.out" },
-      "-=0.4"
-    )
-    .fromTo(".hero-description",
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
-      "-=0.6"
-    )
-    .fromTo(".tech-btn",
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.8, stagger: 0.1, ease: "power2.out" },
-      "-=0.6"
-    );
+    // Create a proxy object to tween the progress value
+    const progressObj = { value: 0 };
+    
+    const logTl = gsap.timeline();
+    const logLines = document.querySelectorAll(".log-line");
+
+    // Animate terminal logs sequentially
+    logLines.forEach((line, index) => {
+      const okText = line.querySelector('.log-ok');
+      
+      // Reveal the line text
+      logTl.to(line, { opacity: 1, duration: 0.15 });
+      
+      // If it has an [OK] span, reveal it slightly after
+      if (okText) {
+        logTl.to(okText, { opacity: 1, duration: 0.1 }, "+=0.25");
+      }
+    });
+    
+    // Start progress bar after logs
+    logTl.to(progressObj, {
+      value: 100,
+      duration: 1.5,
+      ease: "power2.inOut",
+      onUpdate: () => {
+        const rounded = Math.round(progressObj.value);
+        progressBar.style.width = rounded + "%";
+        progressText.textContent = rounded + "%";
+      },
+      onComplete: () => {
+        // Fade out loader in place
+        gsap.to(loader, {
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          onComplete: () => {
+            loader.style.display = "none";
+            initHeroAnimations();
+          }
+        });
+      }
+    }, "+=0.2");
+
+    // --------------------------------------------------
+    // Main Animations
+    // --------------------------------------------------
+    function initHeroAnimations() {
+      // Hero Title Reveal
+      const heroTl = gsap.timeline();
+      heroTl.fromTo(".title-name",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }
+      )
+      .fromTo(".title-line", 
+        { y: 100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: "power4.out" },
+        "-=0.4"
+      )
+      .fromTo(".hero-status-bar",
+        { opacity: 0, y: -20 },
+        { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+        "-=0.6"
+      )
+      .fromTo(".hero-description",
+        { opacity: 0, x: -20 },
+        { opacity: 1, x: 0, duration: 0.8, ease: "power2.out" },
+        "-=0.4"
+      )
+      .fromTo(".hero-cta-group a",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: "power2.out" },
+        "-=0.6"
+      );
+    }
 
     // --------------------------------------------------
     // ScrollTriggers

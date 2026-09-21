@@ -36,15 +36,17 @@ const translations = {
     "portfolio.title": "> Deployments",
     "portfolio.p1.title": "Amezcua",
     "portfolio.p1.desc": "Plataforma web inmobiliaria.",
-    "portfolio.p2.title": "ADN SPA",
-    "portfolio.p2.desc": "Plataforma web de bienestar.",
+    "portfolio.p2.title": "Seguros con Bere",
+    "portfolio.p2.desc": "Sitio web personal de un agente de seguros que incluye una calculadora de PPR.",
     "portfolio.p3.title": "Trefiladora ITA",
     "portfolio.p3.desc": "Infraestructura e-commerce B2B.",
     "portfolio.p4.title": "Adminika",
     "portfolio.p4.desc": "Gestor inmobiliario y Dashboard.",
+    "portfolio.p5.title": "Nómada Labs",
+    "portfolio.p5.desc": "Agencia de desarrollo web y transformación digital.",
     
     "contact.title": "> init_connection()",
-    "contact.desc": "¿Listo para compilar el siguiente gran sistema? Construyamos software robusto.",
+    "contact.desc": "¿Tienes un proyecto para tu negocio? Estoy listo para construirlo contigo.",
     "contact.btn": "sudo open_connection"
   },
   en: {
@@ -76,19 +78,20 @@ const translations = {
     "about.t4.desc": "Frontend development and web interface construction.",
     "about.t5.title": "Web Development",
     "about.t5.desc": "Development of independent web projects.",
-    
     "portfolio.title": "> Deployments",
     "portfolio.p1.title": "Amezcua",
     "portfolio.p1.desc": "Real estate web platform.",
-    "portfolio.p2.title": "ADN SPA",
-    "portfolio.p2.desc": "Wellness web platform.",
+    "portfolio.p2.title": "Seguros con Bere",
+    "portfolio.p2.desc": "Personal website for an insurance agent including a PPR calculator.",
     "portfolio.p3.title": "Trefiladora ITA",
     "portfolio.p3.desc": "B2B e-commerce infrastructure.",
     "portfolio.p4.title": "Adminika",
     "portfolio.p4.desc": "Real estate manager and Dashboard.",
+    "portfolio.p5.title": "Nómada Labs",
+    "portfolio.p5.desc": "Web development and digital transformation agency.",
     
     "contact.title": "> init_connection()",
-    "contact.desc": "Ready to compile the next big system? Let's build robust software.",
+    "contact.desc": "Do you have a project for your business? I'm ready to build it with you.",
     "contact.btn": "sudo open_connection"
   }
 };

@@ -28,6 +28,23 @@
   </head>
 
   <body>
+    <!-- Global Loader -->
+    <div id="global-loader">
+      <div class="loader-terminal mono-text">
+        <div class="loader-log">
+          <div class="log-line">> init_system() <span class="log-ok">[OK]</span></div>
+          <div class="log-line">> mounting_webgl_engine() <span class="log-ok">[OK]</span></div>
+          <div class="log-line loader-status">> compiling_assets...</div>
+        </div>
+        <div class="loader-progress-wrapper">
+          <span class="bracket">[</span>
+          <div class="progress-bar-container"><div class="progress-bar-fill"></div></div>
+          <span class="bracket">]</span>
+          <span class="progress-text">0%</span>
+        </div>
+      </div>
+    </div>
+
     <!-- WebGL Background Canvas (Neural Network) -->
     <canvas id="webgl-canvas"></canvas>
     
@@ -235,13 +252,13 @@
             </a>
 
             <!-- Project 2 -->
-            <a href="https://adnspa.mx/" target="_blank" class="project-row" data-image="img/adnspa.png">
+            <a href="https://segurosconbere.com/" target="_blank" class="project-row" data-image="img/segurosconbere.webp">
               <div class="project-index mono-text">02</div>
               <div class="project-details">
-                <h3 data-i18n="portfolio.p2.title">ADN SPA</h3>
-                <p class="mono-text" data-i18n="portfolio.p2.desc">Plataforma web de bienestar.</p>
+                <h3 data-i18n="portfolio.p2.title">Seguros con Bere</h3>
+                <p class="mono-text" data-i18n="portfolio.p2.desc">Sitio web personal de un agente de seguros que incluye una calculadora de PPR</p>
               </div>
-              <div class="project-tech mono-text">[HTML, CSS, JS]</div>
+              <div class="project-tech mono-text">[HTML, CSS, JS, React, Tailwind CSS]</div>
               <div class="project-arrow"><i class="ph ph-arrow-up-right"></i></div>
             </a>
 
@@ -267,6 +284,17 @@
               <div class="project-arrow"><i class="ph ph-arrow-up-right"></i></div>
             </a>
 
+            <!-- Project 5 -->
+            <a href="https://nomadalabs.com.mx" target="_blank" class="project-row" data-image="img/nomadalabs.webp">
+              <div class="project-index mono-text">05</div>
+              <div class="project-details">
+                <h3 data-i18n="portfolio.p5.title">Nómada Labs</h3>
+                <p class="mono-text" data-i18n="portfolio.p5.desc">Agencia de desarrollo web y transformación digital</p>
+              </div>
+              <div class="project-tech mono-text">[HTML, CSS, JS, React, Tailwind CSS, Three.js, TypeScript, Firebase]</div>
+              <div class="project-arrow"><i class="ph ph-arrow-up-right"></i></div>
+            </a>
+
           </div>
         </div>
       </section>
@@ -276,8 +304,8 @@
         <div class="contact-container">
           <div class="contact-box">
             <h2 class="section-title" data-i18n="contact.title">&gt; init_connection()</h2>
-            <p class="mono-text" data-i18n="contact.desc">¿Tienes un proyecto para tu negocio? Fundador de Nómada Labs, listo para construirlo contigo.</p>
-            <a href="https://wa.link/m4favs" target="_blank" class="tech-btn primary-tech">
+            <p class="mono-text" data-i18n="contact.desc">¿Tienes un proyecto para tu negocio? Estoy listo para construirlo contigo.</p>
+            <a href="https://api.whatsapp.com/send?phone=524612082288&text=Hola%2C%20v%C3%AD%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20sobre%20un%20proyecto." target="_blank" class="tech-btn primary-tech">
               <span data-i18n="contact.btn">sudo open_connection</span>
               <i class="ph ph-terminal-window"></i>
             </a>
